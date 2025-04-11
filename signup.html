@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Sign Up</title>
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<div class="header__container container">
+<nav class="header__nav navbar navbar-expand-lg navbar-dark">
+<div class="container-fluid">
+<a class="header__logo navbar-brand" href="index.html">
+<img alt="Logo" class="logo-img" src="LOGO KPI.png" style="height: 40px; margin-right: 10px;"/>
+                            MyContact.kpi
+                        </a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a aria-current="page" class="nav-link" href="index.html">Головна</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="profile.html">Профіль</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about.html">Про сайт</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="signup.html" id="signUp">Реєстрація</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="signin.html" id="signIn">Вхід</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main class="page">
+<div class="page__signup signup">
+<div class="signup__container container">
+<div class="signup__card">
+<h2>Create an Account</h2>
+<form action="#" class="signup__form register-form">
+<div>
+<input id="InputNickname1" placeholder="Nickname" type="text"/>
+</div>
+<div class="gender-options">
+<label>
+<input id="flexRadioDefault1" name="gender" type="radio"/> Male
+                                </label>
+<label>
+<input id="flexRadioDefault2" name="gender" type="radio"/> Female
+                                </label>
+</div>
+<div>
+<input id="email" placeholder="Email" type="email"/>
+</div>
+<div>
+<input id="InputTel1" placeholder="Phone Number" type="tel"/>
+</div>
+<div>
+<input id="password" placeholder="Password" type="password"/>
+</div>
+<div class="checkbox">
+<label>
+<input id="Check1" type="checkbox"/> Check me out
+                                </label>
+</div>
+<button class="btn btn-primary" type="submit">Sign Up</button>
+<input id="confirm-password" placeholder="Confirm Password" type="password"/></form><div class="error-message" style="color: red; margin-top: 10px;"></div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="footer__copy">MyContact.kpi - ваш телефонний довідник</div>
+</footer>
+</div>
+<script crossorigin="anonymous" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js" type="module"></script></body>
+</html>

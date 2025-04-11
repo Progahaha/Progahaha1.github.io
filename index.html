@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab_1 by KV-22 Yatsenko</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <nav class="header__nav navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <a class="header__logo navbar-brand" href="index.html">
+                            <img src="LOGO KPI.png" alt="Logo" class="logo-img" style="height: 40px; margin-right: 10px;">
+                            MyContact.kpi
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="profile.html">Профіль</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">Про сайт</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="signup.html" id="signUp">Реєстрація</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="signin.html" id="signIn">Вхід</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="page">
+            <div class="manage-main container">
+                <table class="table table-main">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Ім'я контакту</th>
+                            <th>Номер контакту</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="1">
+                            <td class="table-main__data_1">1</td>
+                            <td class="table-main__data_2">Іванов Іван</td>
+                            <td class="table-main__data_3">+380501234567</td>
+                          </tr>
+                          <tr data-id="2">
+                            <td class="table-main__data_1">2</td>
+                            <td class="table-main__data_2">Петренко Олена</td>
+                            <td class="table-main__data_3">+380671234567</td>
+                          </tr>
+                          <tr data-id="3">
+                            <td class="table-main__data_1">3</td>
+                            <td class="table-main__data_2">Сидоров Олексій</td>
+                            <td class="table-main__data_3">+380931234567</td>
+                          </tr>
+                          <tr data-id="4">
+                            <td class="table-main__data_1">4</td>
+                            <td class="table-main__data_2">Яценко Владислав</td>
+                            <td class="table-main__data_3">+380960809541</td>
+                          </tr>
+                          <tr data-id="5">
+                            <td class="table-main__data_1">5</td>
+                            <td class="table-main__data_2">Ялівець Станіслав</td>
+                            <td class="table-main__data_3">+380931234567</td>
+                          </tr>
+                          <tr data-id="6">
+                            <td class="table-main__data_1">6</td>
+                            <td class="table-main__data_2">Зеленський Володимир</td>
+                            <td class="table-main__data_3">+380777777777</td>
+                          </tr>
+                          <tr data-id="7">
+                            <td class="table-main__data_1">7</td>
+                            <td class="table-main__data_2">Джон Дое</td>
+                            <td class="table-main__data_3">+380380380380</td>
+                          </tr>
+                    </tbody>
+                </table>
+                <div class="manage-main__buttons">
+                    <button class="manage-main__button button-add">Додати</button>
+                    <button class="manage-main__button button-edit">Редагувати</button>
+                    <button class="manage-main__button button-delete">Видалити</button>
+                    <div class="search-container">
+                        <input type="text" placeholder="Пошук...">
+                        <div class="search-icon"></div>
+                    </div>
+                </div>
+                <div class="manage-main__rating">
+                    <p class="rating-text">Рейтинг:</p>
+                    <div class="stars">
+                        <div class="star orange"></div>
+                        <div class="star orange"></div>
+                        <div class="star orange"></div>
+                        <div class="star gray"></div>
+                        <div class="star gray"></div>
+                    </div>
+                </div>
+
+                <!-- Модальне вікно для додавання контакту -->
+                <div class="add-modal">
+                    <div class="add-modal__content">
+                        <span class="add-modal__close">×</span>
+                        <h2>Додати контакт</h2>
+                        <div class="add-modal__form">
+                            <input type="text" class="add-modal__name" placeholder="Ім'я">
+                            <input type="text" class="add-modal__phone" placeholder="Номер телефону">
+                            <div id="addErrorMessage" class="error-message"></div>
+                            <button class="add-modal__button">Додати</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Модальне вікно для редагування контакту -->
+                <div class="edit-modal">
+                    <div class="edit-modal__content">
+                        <span class="edit-modal__close">×</span>
+                        <h2>Редагувати контакт</h2>
+                        <div class="edit-modal__form">
+                            <input type="text" class="edit-modal__name" placeholder="Нове ім'я (необов’язково)">
+                            <input type="text" class="edit-modal__phone" placeholder="Новий номер (необов’язково)">
+                            <div id="editErrorMessage" class="error-message"></div>
+                            <button class="edit-modal__button">Зберегти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__copy">MyContact.kpi - ваш телефонний довідник</div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="main.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d4e94ede3beeb2',t:'MTc0NDE0ODMwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
